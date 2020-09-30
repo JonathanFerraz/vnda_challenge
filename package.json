@@ -15,7 +15,8 @@
     "gulp-csso": "latest",
     "gulp-htmlmin": "latest",
     "gulp-sass": "latest",
-    "gulp-uglify": "latest"
+    "gulp-uglify": "latest",
+    "del": "latest"
   },
   "dependencies": {
     "gulp-concat": "^2.6.1",
