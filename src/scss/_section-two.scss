@@ -1,0 +1,118 @@
+@import "variables";
+
+#section-two {
+  width: 100%;
+  height: 600px;
+  background: $almond;
+  background: linear-gradient(90deg, $almond 82%, rgba(255,255,255,1) 82%);
+  display: flex;
+  margin-bottom: 10vh;
+
+  .section-two-content {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    // width: 50vw;
+    // padding: 50px 0px;
+
+    .section-two-image {
+      width: 350px;
+      height: 500px;
+      overflow: hidden;
+      box-shadow: 0px 4px 24px 0 rgba(56,50,124,.1);
+
+      @include border-radius();
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+      }
+    }
+
+    .section-two-text {
+      width: 400px;
+      margin-left: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      p {
+        font-size: 17px;
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 54px;
+        margin: 25px 0px;
+      }
+
+      .cta {
+        background: $black;
+        border: none;
+        color: #fff;
+        padding: 15px 35px;
+        border-radius: .35rem;
+        -webkit-border-radius: .35rem;
+        -moz-border-radius: .35rem;
+        -ms-border-radius: .35rem;
+        -o-border-radius: .35rem;
+        text-transform: uppercase;
+        box-shadow: 0px 4px 24px 0 rgba(56,50,124,.1);
+      }
+    }
+  }
+}
+
+
+
+@media(max-width: 992px) {
+  #section-two {
+    height: unset;
+    background: $almond;
+    background: linear-gradient(90deg, $almond 100%, rgba(255,255,255,1) 100%);
+
+    .section-two-content {
+      width: 100%;
+
+      .section-two-image {
+        width: 100%;
+        height: 350px;
+        margin-bottom: 25px;
+      }
+  
+      .section-two-text {
+        width: 100%!important;
+        margin: unset;
+
+        h1 {
+          margin: 25px 0px;
+        }
+
+        h1 ~ p {
+          margin-bottom: 25px;
+        }
+      } 
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  #section-two {
+    .section-two-content {
+      .section-two-image {
+        height: 250px;
+      }
+      .section-two-text {
+        p {
+          font-size: 16px;
+        }
+
+        h1 {
+          font-size: 36px;
+          line-height: 42px;
+        }
+      }
+    }
+  }
+}

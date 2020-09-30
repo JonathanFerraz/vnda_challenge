@@ -1,0 +1,21 @@
+// Hero
+
+.parallax {
+  background-color: #000;
+  overflow: hidden;
+  height: calc(100vh - 100px);
+}
+
+.parallax-image {
+  background-image: url("https://picsum.photos/1920/1080");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100%;
+}
+
+@media(max-width: 992px) {
+  .parallax {
+    height: calc(80vh - 100px);
+  }
+}

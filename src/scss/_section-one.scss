@@ -1,0 +1,210 @@
+@import "variables";
+
+#section-one {
+  width: 100%;
+  background: $almond;
+  background: linear-gradient(180deg, $almond 68%, rgba(255,255,255,1) 64%);
+  margin-bottom: 10vh;
+  .column {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    .texts {
+      width: 320px;
+      margin-top: 70px;
+      p {
+        font-size: 17px;
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 54px;
+        margin: 25px 0px;
+      }
+    }
+  }
+  .arrow-down {
+    position: absolute;
+    width: 80px;
+    bottom: 130px;
+    left: 0px;
+  }
+}
+
+.card-grid {
+  width: 725px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  grid-template-areas:
+    ". card_two"
+    "card_one card_three"
+    ". card_three";  
+
+  .card {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 24px 0 rgba(56,50,124,.1);
+    background: $white;
+    @include transition();
+    @include border-radius();
+    &:hover {
+      box-shadow: 0px 4px 24px 0 rgba(56,50,124,.25);
+      transform: translateY(-5px);
+      -webkit-transform: translateY(-5px);
+      -moz-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      -o-transform: translateY(-5px);
+    }
+    .image {
+      width: 100%;
+      height: 250px;
+      background: $white;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .description {
+      width: 100%;
+      text-align: center;
+      @include flex-center();
+      flex-direction: column;
+      h1 {
+        font-size: 22px;
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 0px
+      }
+      p {
+        font-size: 14px;
+        width: 80%;
+      }
+    }
+    &:nth-child(1) {
+      min-height: 600px;
+      .image {
+        height: 500px;
+      }
+    }
+    &:nth-child(2) {
+      height: 300px;
+      .image {
+        height: 200px;
+      }
+    }
+    &:nth-child(3) {
+      min-height: 600px;
+      margin-top: -143px;
+      .image {
+        height: 500px;
+      }
+    }
+  }
+}
+.card_one { 
+  grid-area: card_one;
+  margin-top: -400px; 
+}
+.card_two { 
+  grid-area: card_two; 
+}
+.card_three { 
+  grid-area: card_three; 
+}  
+
+@media(max-width: 992px) {
+  #section-one {
+    background: linear-gradient(180deg,#f5e5d9 45%,#fff 45%);
+    .column {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: unset;
+      .texts {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+    .arrow-down {
+      display: none;
+    }
+  }
+  .card-grid {
+    width: 100%;
+    // grid-template-areas: unset;  
+
+    grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      grid-template-areas:
+      ". . ."
+      "left right ."
+      "bottom bottom .";
+
+    .card {
+      .description {
+        padding: 15px;
+        h1 {
+          margin-top: 0px
+        }
+      }
+      &:nth-child(1), &:nth-child(2) {
+          height: unset;
+          min-height: unset;
+        .image {
+          height: 250px;
+        }
+      }
+      &:nth-child(3) {
+        min-height: unset;
+        margin-top: unset;
+        .image {
+          height: 250px;
+        }
+      }
+    }
+  }
+
+
+  .card_one { 
+    grid-area: left;
+    margin-top: unset; 
+  }
+  .card_two { 
+    grid-area: right; 
+  }
+  .card_three { 
+    grid-area: bottom; 
+  }  
+}
+
+@media(max-width: 768px) {
+  #section-one {
+    background: linear-gradient(180deg,#f5e5d9 37%,#fff 37%);
+    .card-grid {
+      width: 100%;
+      grid: none;
+      .card {
+        .description {
+          h1 {
+            width: 90%;
+          }
+          p {
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    .card_one {grid-area: unset;}
+    .card_two {grid-area: unset;}
+    .card_three {grid-area: unset;} 
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "vaga_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.html",
+  "scripts": {
+    "start": "npx http-server ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "latest",
+    "gulp-htmlmin": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-terser": "^1.4.0"
+  }
+}
