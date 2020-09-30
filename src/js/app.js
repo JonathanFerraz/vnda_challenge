@@ -3,11 +3,15 @@
 window.onscroll = scroll;
 
 function scroll () {
-  let parallax = document.getElementsByClassName('parallax')[0];
-  let parallax_image = document.getElementsByClassName('parallax-image')[0];
-  
+  var parallax = document.querySelector('.parallax');
+  var parallax_image = document.querySelector('.parallax-image');
+  var parallax_text = document.querySelector('.parallax-text'); 
+
   if (window.pageYOffset < parallax.clientHeight) {
     parallax_image.style.backgroundPosition = "50% " + (window.pageYOffset / 4) + "px";
+    parallax_text.style.top = - (window.pageYOffset * - 0.029)+ 'rem';
+
+    parallax_text.style.opacity = '1' - (window.pageYOffset * 0.0018);
   }
 }
 
