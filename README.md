@@ -5,7 +5,7 @@ Basta acessar este <a href="https://vnda-challenge.netlify.app/">link</a><br>
 ### Rodar projeto localmente
 ```bash
 # Clonar o projeto
-git clone https://github.com/JonathanFerraz/vnda-challenge.git
+git clone https://github.com/JonathanFerraz/vnda_challenge.git
 
 # Vá para a pasta do projeto e rode os seguintes comandos:
 npm install
