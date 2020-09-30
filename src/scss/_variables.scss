@@ -31,9 +31,9 @@ $playfair: 'Playfair Display', serif;
 }
 
 @mixin transition {
-  transition: .3s ease-in-out;
-  -webkit-transition: .3s ease-in-out;
-  -moz-transition: .3s ease-in-out;
-  -ms-transition: .3s ease-in-out;
-  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out!important;
+  -webkit-transition: .3s ease-in-out!important;
+  -moz-transition: .3s ease-in-out!important;
+  -ms-transition: .3s ease-in-out!important;
+  -o-transition: .3s ease-in-out!important;
 }
