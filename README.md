@@ -1,3 +1,7 @@
+### Live preview
+Basta acessar este <a href="https://marcusgoncalvess.github.io/frontend-challenge-junior/dist/">https://vnda-challenge.netlify.app/</a><br>
+### Ou <br>
+
 ### Rodar projeto localmente
 ```bash
 # Clonar o projeto
