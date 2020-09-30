@@ -1,5 +1,5 @@
 ### Live preview
-Basta acessar este <a href="https://marcusgoncalvess.github.io/frontend-challenge-junior/dist/">https://vnda-challenge.netlify.app/</a><br>
+Basta acessar este <a href="https://vnda-challenge.netlify.app/">link</a><br>
 ### Ou <br>
 
 ### Rodar projeto localmente
