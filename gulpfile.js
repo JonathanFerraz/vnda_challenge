@@ -77,4 +77,4 @@ gulp.task('watch', function(){
   gulp.watch('./src/**/*.html', gulp.series('pages'));    
 });
 
-gulp.task('default', gulp.series('styles', 'scripts', 'images', 'pages'));
+gulp.task('build', gulp.series('styles', 'scripts', 'images', 'pages'));
