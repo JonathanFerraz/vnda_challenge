@@ -40,6 +40,14 @@ var swiper = new Swiper('.swiper-container', {
   }
 });
 
+var swiper = new Swiper('.carousel-container', {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 
 // Header toggle
 
@@ -81,4 +89,20 @@ function typeWriter(e) {
 
 const titulo = document.querySelector('h1');
 typeWriter(titulo);
+
+// Footer form
+
+const inputFields = document.querySelectorAll('.input-wrapper input');
+for (let inputField of inputFields) {
+  inputField.oninput = e => {
+    if (e.target.value !== '') {
+      inputField.classList.add('filled');
+    } else {
+      inputField.classList.remove('filled');
+    }
+  }
+  inputField.addEventListener('focusout', (e) => {
+    inputField.classList.add('highlight-if-invalid');
+  });
+}
 

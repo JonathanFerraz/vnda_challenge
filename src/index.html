@@ -10,7 +10,7 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
-  <title>Document</title>
+  <title> VNDA - Challenge </title>
 </head>
 <body>
   <!-- Header -->
@@ -92,7 +92,7 @@
         <div class="card-grid">
           <div class="card_one card">
             <div class="image">
-              <img src="https://via.placeholder.com/250x400" alt="">
+              <img src="https://picsum.photos/250/400" alt="">
             </div>
             <div class="description">
               <h1>Lorem, ipsum.</h1>
@@ -103,7 +103,7 @@
 
           <div class="card_two card">
             <div class="image">
-              <img src="https://via.placeholder.com/250x400" alt="">
+              <img src="https://picsum.photos/250/401" alt="">
             </div>
             <div class="description">
               <h1>Lorem, ipsum.</h1>
@@ -114,7 +114,7 @@
 
           <div class="card_three card">
             <div class="image">
-              <img src="https://via.placeholder.com/250x400" alt="">
+              <img src="https://picsum.photos/250/402" alt="">
             </div>
             <div class="description">
               <h1>Lorem, ipsum.</h1>
@@ -148,8 +148,21 @@
           </p>
           <button class="cta">Call-to-action</button>
         </div>
-      </div>
 
+        <div class="carousel">
+          <!-- Swiper -->
+          <div class="carousel-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://picsum.photos/450/250" alt="Destaque"></div>
+              <div class="swiper-slide"><img src="https://picsum.photos/450/251" alt="Destaque"></div>
+              <div class="swiper-slide"><img src="https://picsum.photos/450/252" alt="Destaque"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -221,23 +234,47 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-left grids">
-        <div class="menu-1">
           <h2>Menu</h2>
           <div class="grid-menu">
-            <p>Submenu</p>
-            <p>Submenu</p>
-            <p>Submenu</p>
-            <p>Submenu</p>
+            <a href="">Submenu</a>
+            <a href="">Submenu</a>
+            <a href="">Submenu</a>
+            <a href="">Submenu</a>
+          </div>
+      </div>
+      <div class="footer-bottom grids">
+        <h2>Entrar em contato</h2>
+        <form action="">
+          <div class="input-wrapper">
+            <input type="email" />
+            <label><span>Email</span></label>
+            <p class="error-message">Por favor, insira um email válido.</p>
+            <button class="input-submit" type="submit"> ENVIAR > </button>
+          </div>
+        </form>
+      </div>
+      <div class="footer-right grids">
+        <h2>Redes Sociais</h2>
+        <div class="social-grid">
+          <div class="social">
+            <div class="bg">
+              <img src="assets/fb-icon.svg" alt="Facebook">
+            </div>
+            <p>Facebook</p>
+          </div>
+          <div class="social">
+            <div class="bg">
+              <img src="assets/insta-icon.svg" alt="Instagram">
+            </div>
+            <p>Instagram</p>
           </div>
         </div>
       </div>
-      <div class="footer-bottom grids"></div>
-      <div class="footer-right grids"></div>
     </div>
   </div>
 
   <div class="bottom-footer">
-    @Vnda - Tecnologia para ecommerce - CNPJ 00.0000.000/0001-00
+    <p>@Vnda - Tecnologia para ecommerce - CNPJ 00.0000.000/0001-00</p>
   </div>
 
 </footer>
