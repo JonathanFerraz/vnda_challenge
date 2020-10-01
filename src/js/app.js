@@ -68,3 +68,17 @@ function toggleNav() {
   })
 }
 
+// Efeito Typewrtper 
+// Obs.: Decidi utilizar FOR loop no lugar de forEach pois proporciona um desempenho melhor
+
+function typeWriter(e) {
+  const textoArray = e.innerHTML.split('');
+  e.innerHTML = '';
+  for(let i = 0; i < textoArray.length; i++) {
+    setTimeout(() => e.innerHTML += textoArray[i], 75 * i);
+  }
+}
+
+const titulo = document.querySelector('h1');
+typeWriter(titulo);
+

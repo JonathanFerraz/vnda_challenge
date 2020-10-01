@@ -1,23 +1,21 @@
-// Hero
+@import 'animations';
 
 .parallax {
-  background-color: #000;
   overflow: hidden;
   height: calc(100vh - 100px);
 
   .parallax-text {
     width: 100%;
     height: calc(100vh - 100px);
-    background: transparent!important;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-direction: column;
-
-    h1, h5 {
+    text-align: center;
+    
+    h1{
       color: #fff;
-      font-size: 48px
+      font-size: 48px;
+      max-width: 50vw;
     }
   }
 
@@ -30,10 +28,26 @@
   }
 }
 
-
+.type-writer {
+  &:after {
+    content: '|';
+    opacity: 1;
+    margin-left: 2px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+}
 
 @media(max-width: 992px) {
-  .parallax {
+  .parallax, .parallax .parallax-text {
     height: calc(80vh - 100px);
+  }
+
+  .parallax .parallax-text {
+    h1 {
+      font-size: 22px;
+      padding: 0px 25px;
+      max-width: unset;
+    }
   }
 }
