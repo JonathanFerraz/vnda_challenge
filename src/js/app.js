@@ -41,4 +41,30 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 
+// Header toggle
+
+function toggleNav() {
+  let burger = document.querySelector('.burger');
+  let menu = document.querySelector('.menu');
+  let overlay = document.querySelector('.overlay');
+  let links = document.querySelectorAll('.menu ul li');
+
+  burger.classList.toggle('toggle');
+  menu.classList.toggle('menu-active');
+  overlay.classList.toggle('overlay-active');
+
+  overlay.addEventListener('click', () => {
+    burger.classList.remove('toggle');
+    menu.classList.remove('menu-active');
+    overlay.classList.remove('overlay-active');
+  });
+
+  links.forEach(e => {
+    e.addEventListener('click', () => {
+      burger.classList.remove('toggle');
+      menu.classList.remove('menu-active');
+      overlay.classList.remove('overlay-active');
+    })
+  })
+}
 
