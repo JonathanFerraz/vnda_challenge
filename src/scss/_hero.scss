@@ -38,16 +38,3 @@
   }
 }
 
-@media(max-width: 992px) {
-  .parallax, .parallax .parallax-text {
-    height: calc(80vh - 100px);
-  }
-
-  .parallax .parallax-text {
-    h1 {
-      font-size: 22px;
-      padding: 0px 25px;
-      max-width: unset;
-    }
-  }
-}

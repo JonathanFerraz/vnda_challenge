@@ -1,0 +1,386 @@
+// Header
+
+@media(max-width: 992px) {
+  .nav-links, .others {
+    display: none
+  }
+
+  .header {
+    height: 80px;
+
+    .logo img {
+      width: 30px
+    }
+  }
+}
+
+@media(max-width: 768px) {
+
+  header {
+    .icons {
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+      position: fixed;
+      background: #fff;
+      right: -70vw;
+      top: 0;
+      bottom: 0;
+      width: 70vw;
+      z-index: 9999;
+      @include transition();
+
+      ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+
+        li {
+          position: relative;
+          width: 100%;
+          background: $cultured;
+          border-bottom: 1px solid #ccc;
+          margin: 0px;
+
+          &:before {
+            display: none
+          }
+
+          a {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+            padding: 15px;
+          }
+        }
+      }
+    }
+
+
+    .menu-active {
+      right: 0;
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
+    -moz-transform: rotate(45deg) translate(-5px, -6px);
+    -ms-transform: rotate(45deg) translate(-5px, -6px);
+    -o-transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $black;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+  
+    @include transition();
+  }
+  
+  .overlay-active {
+    opacity: .5;
+    visibility: visible;
+  }
+}
+
+// Hero 
+
+@media(max-width: 992px) {
+  .parallax, .parallax .parallax-text {
+    height: calc(80vh - 100px);
+  }
+
+  .parallax .parallax-text {
+    h1 {
+      font-size: 22px;
+      padding: 0px 25px;
+      max-width: unset;
+    }
+  }
+}
+
+// Section One
+
+@media(max-width: 992px) {
+  #section-one {
+    background: linear-gradient(180deg,#f5e5d9 45%,#fff 45%);
+    .column {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: unset;
+      .texts {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+    .arrow-down {
+      display: none;
+    }
+  }
+  .card-grid {
+    width: 100%;
+    // grid-template-areas: unset;  
+
+    grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      grid-template-areas:
+      ". . ."
+      "left right ."
+      "bottom bottom .";
+
+    .card {
+      .description {
+        padding: 15px;
+        h1 {
+          margin-top: 0px
+        }
+      }
+      &:nth-child(1), &:nth-child(2) {
+          height: unset;
+          min-height: unset;
+        .image {
+          height: 250px;
+        }
+      }
+      &:nth-child(3) {
+        min-height: unset;
+        margin-top: unset;
+        .image {
+          height: 250px;
+        }
+      }
+    }
+  }
+
+
+  .card_one { 
+    grid-area: left;
+    margin-top: unset; 
+  }
+  .card_two { 
+    grid-area: right; 
+  }
+  .card_three { 
+    grid-area: bottom; 
+  }  
+}
+
+@media(max-width: 768px) {
+  #section-one {
+    background: linear-gradient(180deg,#f5e5d9 37%,#fff 37%);
+    .card-grid {
+      width: 100%;
+      grid: none;
+      .card {
+        .description {
+          h1 {
+            width: 90%;
+          }
+          p {
+            width: 90%;
+          }
+        }
+      }
+    }
+    .card_one {grid-area: unset;}
+    .card_two {grid-area: unset;}
+    .card_three {grid-area: unset;} 
+  }
+}
+
+// Section Two
+
+@media(max-width: 1280px) {
+  #section-two .section-two-content .carousel {
+    display: none;
+  }
+}
+
+@media(max-width: 992px) {
+  #section-two {
+    height: unset;
+    background: $almond;
+    background: linear-gradient(90deg, $almond 100%, rgba(255,255,255,1) 100%);
+
+    .section-two-content {
+      width: 100%;
+
+      .section-two-image {
+        width: 100%;
+        height: 350px;
+        margin-bottom: 25px;
+      }
+  
+      .section-two-text {
+        width: 100%!important;
+        margin: unset;
+
+        h1 {
+          margin: 25px 0px;
+        }
+
+        h1 ~ p {
+          margin-bottom: 25px;
+        }
+      } 
+
+      .carousel {
+        width: 100%;
+        height: 350px;
+        display: block;
+        position: relative;
+        margin-top: 5vh;
+        top: 0px;
+
+        .carousel-container .swiper-wrapper .swiper-slide img {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  #section-two {
+    .section-two-content {
+      .section-two-image {
+        height: 250px;
+      }
+      .section-two-text {
+        p {
+          font-size: 16px;
+        }
+
+        h1 {
+          font-size: 36px;
+          line-height: 42px;
+        }
+      }
+
+      .carousel {
+        height: 250px;
+
+        .carousel-container .swiper-wrapper .swiper-slide img {
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+// Section Insta
+
+@media(max-width: 992px) {
+  #section-insta {
+    .insta-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      ". . ."
+      "left right ."
+      "bottom bottom .";
+
+      .cards {
+        &:nth-child(2) {
+          margin-top: 0px
+        }
+      }
+    }
+  }
+
+  .left { grid-area: left; }
+  .right { grid-area: right; }
+  .bottom { grid-area: bottom; }
+}
+
+
+
+@media(max-width: 768px) {
+  #section-insta {
+    .insta-grid {
+      grid: none;
+    }
+  }
+
+  .left { grid-area: unset; }
+  .right { grid-area: unset; }
+  .bottom { grid-area: unset; }
+}
+
+// Footer
+
+@media (max-width: 992px) {
+	footer {
+		.footer-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			gap: 12px;
+			grid-template-areas: ". ." "bottom bottom" "left right";
+			.grids {
+				width: 100%;
+			}
+			.footer-left {
+				.grid-menu {
+					a {
+						margin-bottom: 30px;
+					}
+				}
+				grid-area: left;
+			}
+			.footer-right {
+				grid-area: right;
+			}
+			.footer-bottom {
+				grid-area: bottom;
+				h2 {
+					text-align: center;
+					margin-bottom: 0px;
+				}
+			}
+		}
+		.bottom-footer {
+			p {
+				width: 80vw;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.bottom-footer {
+		font-size: 14px;
+	}
+	footer {
+		.footer-grid {
+			.grids {
+				padding: 0px 0px;
+			}
+		}
+	}
+}

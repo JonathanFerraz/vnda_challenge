@@ -63,22 +63,6 @@ header {
   }
 }
 
-@media(max-width: 992px) {
-  .nav-links, .others {
-    display: none
-  }
-
-  .header {
-    height: 80px;
-
-    .logo img {
-      width: 30px
-    }
-  }
-}
-
-
-
 /* Burger */
 
 .burger {
@@ -94,102 +78,6 @@ header {
     border-radius: 2px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-}
-
-
-
-
-@media(max-width: 768px) {
-
-  header {
-    .icons {
-      display: none;
-    }
-
-    .menu {
-      display: flex;
-      position: fixed;
-      background: #fff;
-      right: -70vw;
-      top: 0;
-      bottom: 0;
-      width: 70vw;
-      z-index: 9999;
-      @include transition();
-
-      ul {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding-top: 80px;
-
-        li {
-          position: relative;
-          width: 100%;
-          background: $cultured;
-          border-bottom: 1px solid #ccc;
-          margin: 0px;
-
-          &:before {
-            display: none
-          }
-
-          a {
-            width: 100%;
-            display: flex;
-            align-items: stretch;
-            justify-content: stretch;
-            padding: 15px;
-          }
-        }
-      }
-    }
-
-
-    .menu-active {
-      right: 0;
-    }
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .toggle .line1 {
-    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-  }
-
-  .toggle .line3 {
-    -webkit-transform: rotate(45deg) translate(-5px, -6px);
-    transform: rotate(45deg) translate(-5px, -6px);
-    -moz-transform: rotate(45deg) translate(-5px, -6px);
-    -ms-transform: rotate(45deg) translate(-5px, -6px);
-    -o-transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $black;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 999;
-  
-    @include transition();
-  }
-  
-  .overlay-active {
-    opacity: .5;
-    visibility: visible;
   }
 }
 

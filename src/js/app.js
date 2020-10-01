@@ -105,4 +105,3 @@ for (let inputField of inputFields) {
     inputField.classList.add('highlight-if-invalid');
   });
 }
-
