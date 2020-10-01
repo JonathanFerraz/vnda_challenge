@@ -8,6 +8,18 @@ $black: #000;
 $ptSans: 'PT Sans', sans-serif;
 $playfair: 'Playfair Display', serif;
 
+      // input validate
+
+      $height: 60px;
+      $width: 100%;
+      $font-size: 16px;
+      $top-ofset: 30%;
+      $bottom-ofset: 30%;
+      $unfocus-color: rgba(0,0,0,0.5);
+      $focus-color: #272727;
+      $valid-color: rgb(50, 180, 120);
+      $invalid-color: rgb(220, 100, 120);
+
 // Mixins
 
 @mixin space-between-center {
@@ -36,4 +48,13 @@ $playfair: 'Playfair Display', serif;
   -moz-transition: .3s ease-in-out!important;
   -ms-transition: .3s ease-in-out!important;
   -o-transition: .3s ease-in-out!important;
+}
+
+@mixin label-form-transition {
+  transform-origin: top left;
+  transform: translateY(calc(-100% + -20%));
+  -webkit-transform: translateY(calc(-100% + -20%));
+  -moz-transform: translateY(calc(-100% + -20%));
+  -ms-transform: translateY(calc(-100% + -20%));
+  -o-transform: translateY(calc(-100% + -20%));
 }
